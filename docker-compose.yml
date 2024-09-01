@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  django:
+    build:
+      context: .
+      dockerfile: Dockerfile_backend
+    ports:
+      - "8000:8000"
+
+  react:
+    build:
+      context: .
+      dockerfile: Dockerfile_frontend
+    ports:
+      - "3000:3000"
